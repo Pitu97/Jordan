@@ -1,0 +1,484 @@
+body{
+	font-family: 'Zen Dots', cursive;
+	background-image: url(imagenes/fondo-blanco.png);
+}
+
+header, section, footer {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+header {
+	height: 80px;
+	background-color: #f2f2f2;
+	/*position: sticky;*/
+	top: 0;
+}
+
+#marca {
+	width: 250px;
+	height: 80px;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#saludo {
+	width: 225px;
+	height: 155px;
+	padding: 20px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	position: sticky;
+	top: 0;
+	background-color: rgba(38, 38, 38, 0.2);
+	border-radius: 10px;
+	color: black;
+}
+
+#carrito {
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	position: sticky;
+	top: 0;
+}
+
+.carrito-add {
+	float: right;
+	margin-right: 10px;
+}
+
+#carr-txt {
+	display: none;
+	top: 0;
+	position: sticky;
+}
+
+h1{
+	margin: 0;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: #cc0000;
+	text-align: center;
+}
+
+#botonera {
+	width: 385px;
+	height: 80px;
+	float: right;
+}
+
+#botonera ul, #redes ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#botonera ul li , #redes ul li {
+	display: inline;
+}
+
+#botonera ul li a {
+	display: inline-block;
+	padding: 35px 12px;
+	text-decoration: none;
+	font-size: 12px;
+	color: #0d0d0d;
+}
+
+#botonera ul li a:hover {
+	background-color: rgb(153, 0, 0, 0.6);
+	border-radius: 10px;
+}
+
+#inicio {
+	height: 750px;
+}
+
+#presentacion, #presen2, #presen3 {
+	width: 250px;
+	height: 130px;
+	padding: 20px;
+	float: left;
+	margin-top: 575px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+	font-size: 30px;
+	background-color: rgba(242, 242, 242, 0.2);
+	border-radius: 10px;
+}
+
+#carousel1 {
+	background-image: url(imagenes/inicio.jpg);
+}
+
+#carousel2{
+	background-image: url(imagenes/carr1.jpg);
+}
+
+#carousel3{
+	background-image: url(imagenes/carr2.jpg);
+}
+
+#carousel1, #carousel2, #carousel3{
+	background-size: cover;
+	background-position: center;
+}
+
+#zapatillas {
+	height: 930px;
+	background-color: #f2f2f2;
+}
+
+.card-title {
+	font-size: 15px;
+}
+
+/*#box1, #box2, #box3, #box4, #box5, #box6 {
+	height: 340px;
+	width: 310px;
+	float:left;
+}
+
+#box1, #box2, #box3 {
+	margin-bottom: 20px;
+}
+
+#box1 {
+	background-color: #ffff4d;
+}
+
+#box2 {
+	background-color: #ff8533;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#box3 {
+	background-color: #ff3333;
+}
+
+#box4 {
+	background-color: #ff471a;
+}
+
+#box5 {
+	background-color: #ff704d;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#box6 {
+	background-color: #cc0000;
+}*/
+
+#colecciones {
+	height: 450px;
+	background-color: #f2f2f2;
+}
+
+#basquet, #lifestyle, #women {
+	height: 450px;
+	width: 313px;
+	float: left;
+}
+
+#basquet {
+	background-image: url(imagenes/basquet.jpg);
+	background-size: cover;
+}
+
+#col1, #col2, #col3 {
+	background-color: rgba(242, 242, 242, 0.5);
+	border-radius: 10px;
+	float: left;
+	margin-top: 350px;
+	margin-left: 10px;
+	font-size: 25px;
+	padding: 10px;
+	text-decoration: none;
+	color: #cc0000;
+}
+
+#lifestyle {
+	background-image: url(imagenes/lifestyle.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#women {
+	background-image: url(imagenes/women.png);
+	background-size: cover;
+	background-position: 10%;
+}
+
+#img {
+	height: 650px;
+	background-image: url(imagenes/medio.jpg);
+	background-size: cover;
+}
+
+#evolucion {
+	background-color: rgba(242, 242, 242, 0.4);
+	padding: 20px;
+	border-radius: 10px;
+	float: left;
+	margin-top: 530px;
+	margin-left: 20px;
+	text-decoration: none;
+	color: #cc0000;
+	font-size: 20px;
+}
+
+
+footer {
+	height: 250px;
+	background-color: #f2f2f2;
+}
+
+#contacto {
+	height: 250px;
+	width: 350px;
+	float: right;
+}
+
+#contacto p {
+	font-size: 15px;
+	float: left;
+	padding: 20px 10px;
+}
+
+#redes {
+	height: 150px;
+	width: 500px;
+	float: left;
+}
+
+#redes ul li a {
+	padding: 10px 5px; 
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#carr-txt {
+	float: right;
+	width: 150px;
+	margin-top: 60px;
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+
+header, section, footer {
+	width: 580px;
+}
+
+#marca {
+	width: 190px;
+	padding: 18px;
+}
+
+h1{
+	font-size: 38px;
+}
+
+#botonera {
+	width: 325px;
+}
+
+#botonera ul li a {
+	padding: 32.5px 4px;
+}
+
+#inicio {
+	height: 650px;
+}
+
+#presentacion, #presen2, #presen3 {
+	margin-top: 480px;
+}
+
+#zapatillas {
+	height: 720px;
+}
+
+/*#box1, #box2, #box3, #box4, #box5, #box6 {
+	height: 247.2px;
+	width: 190px;
+}
+
+#box1, #box2, #box3 {
+	margin-bottom: 5px;
+}
+
+#box2, #box5,*/ #lifestyle {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#colecciones {
+	height: 300px;
+}
+
+#basquet, #lifestyle, #women {
+	height: 300px;
+	width: 190px;
+}
+
+#col1, #col2, #col3 {
+	margin-top: 230px;
+	font-size: 15px;
+}
+
+#imagen {
+	height: 450px;
+	background-position: center;
+}
+
+#evolucion {
+	margin-top: 330px;
+}
+
+footer {
+	height: 200px;
+}
+
+#contacto {
+	height: 200px;
+	width: 150px;
+}
+
+#contacto p {
+	padding: 10px 5px;
+	font-size: 10px;
+}
+
+#redes {
+	height: 100px;
+	width: 300px;
+}
+
+} /* fin 600px a 1023px */
+
+@media all and (max-width: 599px) {
+
+header, section, footer {
+	width: 90%;
+}
+
+header {
+	height: auto;
+	position: relative;
+}
+
+#marca, #botonera {
+	width: 100%;
+	height: auto;
+	float: none;
+}
+
+h1{
+	font-size: 38px;
+}
+
+#botonera ul li {
+	display: block;
+}
+
+#botonera ul li a {
+	width: 100%;
+	padding: 32.5px 0;
+	text-align: center;
+}
+
+#inicio {
+	height: 580px;
+}
+
+#presentacion, #presen2, #presen3 {
+	width: 80%;
+	height: auto;
+	margin-top: 420px;
+}
+
+#zapatillas {
+	height: 1050px;
+	width: 90%;
+}
+
+/*#box1, #box2, #box3, #box4, #box5, #box6 {
+	height: 180px;
+	width: 49%;
+}
+
+#box1, #box2, #box3 {
+	margin-bottom: 0;
+}
+
+#box2 {
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+#box4, #box6 {
+	margin-left: 5px;
+}
+
+#box5 {
+	margin-right: 0;
+	margin-left: 0;
+}*/
+
+#colecciones {
+	height: 1500px;
+	width: 90%;
+}
+
+#basquet, #lifestyle, #women {
+	height: 500px;
+	width: 100%;
+	float: none;
+}
+
+#col1, #col2, #col3 {
+	margin-top: 400px;
+	font-size: 20px;
+}
+
+#lifestyle {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#imagen {
+	height: 580px;
+}
+
+#evolucion {
+	margin-top: 460px;
+	width: 70%;
+}
+
+footer {
+	height: 150px;
+	width: 90%;
+}
+
+#contacto {
+	height: 150px;
+	width: 70%;
+	float: right;
+}
+
+#redes {
+	height: 150px;
+	width: 30%;
+	float: left;
+}
+
+} /*fin max 599px*/
