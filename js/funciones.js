@@ -1,19 +1,3 @@
-class Producto {
-	constructor(id, nombre, precio, img) {
-		this.id = parseFloat(id);
-		this.nombre = nombre;
-		this.precio = parseFloat(precio);
-		this.img = img;
-		this.disponible = true;
-	}
-	sIva() {
-		this.precio = this.precio * 1.21
-	} 
-	vender() {
-		this.disponible = false;
-	}
-}
-
 $(document).ready(function() {
 	const APIURL = 'https://jsonplaceholder.typicode.com/users'
 	$("#saludo").append(`<h4>Ingresar Usuario</h4>
@@ -43,28 +27,10 @@ $(document).ready(function() {
 	});
 });
 
-$("#saludo").mouseover(() => {
-	$("#saludo").css({"background-color":"rgb(153, 0, 0, 0.6)",
-						"color":"white"});
-	$("#saludo p").css("color","black");
-})
-.mouseout(() => {
-	$("#saludo").css({"background-color":"rgba(38, 38, 38, 0.2)",
-						"color":"black"});
-	$("#saludo p").css("color","red");
-});
-
 const carrito = [];
-const productos = [];
 const guardarSession = (clave,valor) => { localStorage.setItem(clave,valor) };
 let total = 0;
 
-productos.push(new Producto("0","Jordan 1 Retro High","3000","imagenes/jordan1.jpg"));
-productos.push(new Producto("1","Buzo Jordan Jumpman","1600","imagenes/Pantalones.jpg"));
-productos.push(new Producto("2","Jordan Jumpman 2020","2400","imagenes/Jordan2.jpg"));
-productos.push(new Producto("3","Buzo Jordan Sport DNA","2200","imagenes/Buzo.jpg"));
-productos.push(new Producto("4","Jordan 3 Retro","2000","imagenes/Jordan3.jpg"));
-productos.push(new Producto("5","Jordan Dri-FIT","1800","imagenes/Shorts.jpg"));
 
 let i = 0;
 let tarjetas = document.getElementsByClassName('col');
@@ -91,9 +57,7 @@ for (const producto of productos) {
 	i++;
 }
 
-$("#carrito").click(() => {
-	$("#carr-txt").toggle(300);
-});
+
 
 /*function agregarProductos() {
 	let nombre = prompt("Ingrese el nombre del producto: ");
@@ -186,68 +150,11 @@ function venderCarrito(carrito, total) {
 		$("#carr-txt").prepend('<p>Carrito vacio</p>');	
 } 
 
-$("#evolucion").mouseover(() =>	{$("#evolucion").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});})
-.mouseout(() => {$("#evolucion").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});});
-$("#col1").mouseover(() =>	{$("#col1").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});})
-.mouseout(() => {$("#col1").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});}) ;
-$("#col2").mouseover(() => {$("#col2").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});})
-.mouseout(() => {$("#col2").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});}) ;						 
-$("#col3").mouseover(() => {$("#col3").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});})
-.mouseout(() => {$("#col3").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});}) ;						  
+						  
 
 //agregarCarrito(productos[0].nombre,productos[0].precio);
 //venderProducto(productos[1]);
 //agregarProductos();
 
-/*MODO OSCURO 
 
-let mod = confirm('¿Quiere ver el sitio en Modo Oscuro?')
 
-if(mod) {
-	$("#cabecera").css("background-color","#1a1a1a");
-	$("a").css("color","#f2f2f2");
-	$("#presentacion, #presen2, #presen3").css({"background-color":"rgb(38, 38, 38, 0.7)",
-							"color":"#cc0000"});
-	$("#evolucion").css({"background-color":"rgb(38, 38, 38, 0.7)",
-						"color":"#f2f2f2"})
-	.mouseover(() => {$("#evolucion").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});})
-	.mouseout(() => {$("#evolucion").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});});
-	$("#col1, #col2, #col3").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});
-	$("#col1").mouseover(() => {$("#col1").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});})
-	.mouseout(() =>	{$("#col1").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});});
-	$("#col2").mouseover(() => {$("#col2").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});})
-	.mouseout(() =>	{$("#col2").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});});
-	$("#col3").mouseover(() => {$("#col3").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});})
-	.mouseout(() =>	{$("#col3").css({"background-color":"rgb(38, 38, 38, 0.7)",
-					"color":"#f2f2f2"});});									
-	$("#colecciones").css("background-color","#1a1a1a");
-	$("body").css("background-image","url(imagenes/fondo-negro.png)");
-	$("footer").css({"background-color":"#990000",
-					"color":"#f2f2f2"});
-	$("#zapatillas").css("background-color","#1a1a1a");
-	$("#saludo").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"})
-	.mouseout(() => {$("#saludo").css({"background-color":"rgba(242, 242, 242, 0.4)",
-					"color":"#cc0000"});});
-	$("#carrito img").remove();
-	$("#carrito").prepend('<img src="imagenes/svg/carrito-osc.png">');
-
-}
-
-*/
