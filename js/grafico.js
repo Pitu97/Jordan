@@ -30,7 +30,7 @@ $("#saludo").mouseover(() => {
 
 /*MODO OSCURO */
 
-let mod = confirm('¿Quiere ver el sitio en Modo Oscuro?')
+/*let mod = confirm('¿Quiere ver el sitio en Modo Oscuro?')
 
 if(mod) {
 	$("#cabecera").css("background-color","#1a1a1a");
@@ -69,7 +69,7 @@ if(mod) {
 	$("#carrito img").remove();
 	$("#carrito").prepend('<img src="imagenes/svg/carrito-osc.png">');
 
-}
+} */
 
 /*CARRITO */
 

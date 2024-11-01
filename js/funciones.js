@@ -31,6 +31,9 @@ const carrito = [];
 const guardarSession = (clave,valor) => { localStorage.setItem(clave,valor) };
 let total = 0;
 
+function verDetalle(indice) {
+	window.location.href = `detalle.html?id=${indice}`;
+}
 
 let i = 0;
 let tarjetas = document.getElementsByClassName('col');
@@ -40,9 +43,9 @@ for (const producto of productos) {
 	<div class="card-body">
 	<h5 class="card-title">${producto.nombre}</h5>
 	<h5 class="card-title">$${producto.precio}</h5>
-	<a href="#" id="btn${producto.id}" class="btn btn-danger">Comprar</a>
+	<a href="#" id="btn${producto.id}" class="btn btn-danger">Ver Mas</a>
 	<a href="#" id= "carr${producto.id}" class="carrito-add"><img src="imagenes/svg/carrito-add.png"</a></div></div>`;
-	$(`#btn${producto.id}`).click(() => {venderProducto(producto)})
+	$(`#btn${producto.id}`).click(() => {verDetalle(producto.id)})
 	.mouseover(()=>{$(`#btn${producto.id}`).animate({width:'117px',
 													height:'39px'},
 													"fast");
@@ -56,6 +59,7 @@ for (const producto of productos) {
 	$(`#carr${producto.id}`).click(() => {agregarCarrito(producto.nombre,producto.precio)});
 	i++;
 }
+
 
 
 
