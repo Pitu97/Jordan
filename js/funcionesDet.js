@@ -21,6 +21,7 @@ for (const producto of productos) {
         <h2>$${producto.precio}</h2>
         <a href="#" id="btn${producto.id}" class="btn btn-danger">Agregar al Carrito</a>
         </div>`
+        $(`#btn${producto.id}`).click(() => {agregarCarrito(producto.nombre,producto.precio)});
     } 
 }
 
