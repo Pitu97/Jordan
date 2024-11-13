@@ -41,8 +41,7 @@ for (const producto of productos) {
 	<div class="card-body">
 	<h5 class="card-title">${producto.nombre}</h5>
 	<h5 class="card-title">$${producto.precio}</h5>
-	<a href="#" id="btn${producto.id}" class="btn btn-danger">Ver Mas</a>
-	<a href="#" id= "carr${producto.id}" class="carrito-add"><img src="imagenes/svg/carrito-add.png"</a></div></div>`;
+	<a href="#" id="btn${producto.id}" class="btn btn-danger">Ver Mas</a>`;
 	$(`#btn${producto.id}`).click(() => {verDetalle(producto.id)})
 	.mouseover(()=>{$(`#btn${producto.id}`).animate({width:'117px',
 													height:'39px'},
@@ -54,7 +53,6 @@ for (const producto of productos) {
 													"fast");
 					}
 			   );
-	$(`#carr${producto.id}`).click(() => {agregarCarrito(producto.nombre,producto.precio)});
 	i++;
 }
 
