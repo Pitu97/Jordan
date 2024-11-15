@@ -1,42 +1,11 @@
-$(document).ready(function() {
-	const APIURL = 'https://jsonplaceholder.typicode.com/users'
-	$("#saludo").append(`<h4>Ingresar Usuario</h4>
-						<input type="number" class="persona" placeholder="Ingrese su id" style="width:120px; font-size:10px; display:none">
-						<button id="ingreso">Ingresar</button>`);
-	$("#ingreso").click(() => {
-		$("#saludo input").toggle(300);
-		$(".persona").change(function (e) {
-			if (e.target.value <= 10 && e.target.value > 0) {
-				$.get(APIURL, function(respuesta, estado) {
-				if(estado === "success") {
-					let usuarios = respuesta;
-					for (const datos of usuarios) {
-						if(e.target.value == datos.id) {
-							$("#saludo h6, #saludo p, #saludo h4").remove();
-							$("#saludo").prepend(`<h6>Bienvenido ${datos.username}!</h6>
-											<p style="color:red; font-size:11px">Ingresar otro usuario</p>`);
-						}
-					}
-				}
-			});
-		}
-		else {
-			$("#saludo h6, #saludo p, #saludo h4").remove();
-			$("#saludo").prepend(`<h4>Usuario Inexistente</h4>`)
-		}});
-	});
-});
-
-
-
 function verDetalle(indice) {
 	window.location.href = `detalle.html?id=${indice}`;
 }
 
-let i = 0;
+let j = 0;
 let tarjetas = document.getElementsByClassName('col');
 for (const producto of productos) {
-	tarjetas[i].innerHTML = `<div class="card h-100">
+	tarjetas[j].innerHTML = `<div class="card h-100">
 	<img src="${producto.img}" class="card-img-top" alt="...">
 	<div class="card-body">
 	<h5 class="card-title">${producto.nombre}</h5>
@@ -53,7 +22,7 @@ for (const producto of productos) {
 													"fast");
 					}
 			   );
-	i++;
+	j++;
 }
 
 
